@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  newmand:
+  newman:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,6 +16,10 @@ jobs:
         run: |
           mkdir testArtifacts
 
+      #Config environement
+      - name: Install Node
+        uses: actions/setup-node@v5
+        
       - name: Install Newman
         run: |
           npm install -g newman
