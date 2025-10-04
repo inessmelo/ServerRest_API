@@ -29,7 +29,7 @@ jobs:
         run: newman run ServerRest.postman_collection.json -e ServerRest.postman_environment.json -r cli,htmlextra
 
       - name: Report
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v4
         with:
           name: Reports
           path: newman
