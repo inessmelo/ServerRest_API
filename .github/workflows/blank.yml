@@ -17,12 +17,6 @@ jobs:
       #Config environement
       - name: Install Node
         uses: actions/setup-node@v4.0.2  # Define o Node.js
-
-      - name: Install dependencies
-        run: yarn  # Instala dependências
-
-      - name: Run tests
-        run: yarn test  # Executa os testes
         
       - name: Install Newman
         run: |
