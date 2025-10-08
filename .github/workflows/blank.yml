@@ -8,28 +8,22 @@ on:
 jobs:
   newman:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v5
-
+      - uses: actions/checkout@v4
       - name: Create dir for report
         run: |
           mkdir testArtifacts
-
       #Config environement
       - name: Install Node
         uses: actions/setup-node@v5
-        
       - name: Install Newman
         run: |
           npm install -g newman
           npm install -g newman-report-htmlextra
-
       - name: Run Test
         run: newman run ServerRest.postman_collection.json -e ServerRest.postman_environment.json -r cli,htmlextra
-
       - name: Report
         uses: actions/upload-artifact@v4
         with:
-          name: Reports
+          name: reports
           path: newman
