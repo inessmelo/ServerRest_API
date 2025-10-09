@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "b830bc06-e941-4453-9c38-b27ff125e602",
 		"name": "ServerRest",
-		"description": "README\n\n**O ServeRest é uma API REST gratuita que simula uma loja virtual com intuito de servir de material de estudos de testes de API.**\n\n**Não deixe de seguir o** [<b>autor do projeto</b>](https://github.com/PauloGoncalvesBH) **e deixar um star no repositório:** [<b>github.com/ServeRest/ServeRest</b>](https://github.com/ServeRest/ServeRest)\n\nEssa página documenta todas as rotas e como acessá-las. Para mais detalhes do ServeRest (como executar localmente utilizando Docker ou NPM, alterar timeout de autenticação, etc) acesse [o repositório do ServeRest](https://github.com/serverest/serverest).\n\nEstá utilizando Postman? Importe o [JSON do Swagger](https://raw.githubusercontent.com/ServeRest/ServeRest/trunk/docs/swagger.json) para ter acesso às collections.\n\nVai fazer teste de carga? Leia a seção '[Teste de Carga](https://github.com/ServeRest/ServeRest#teste-de-carga)'.\n\nMuito obrigado ♥ a todos que apoiam o projeto [financeiramente](https://opencollective.com/serverest#section-contributors) ou [com código, ideias e divulgação](https://github.com/ServeRest/ServeRest#contribuidores-), graças a vocês **mais de R$ 2000,00 foram doados para a ONG** [<b>Todas as letras</b>](https://todasasletras.org/) até o momento.\n\nO ServeRest possui um front, com status em beta, não deixe de conhecer: [front.serverest.dev](https://front.serverest.dev/).\n\nPrecisa de apoio? [Abra uma issue](https://github.com/ServeRest/ServeRest/issues) ou contate o mantenedor do projeto:\n\n[Paulo Gonçalves&nbsp;- Website](https://www.linkedin.com/in/paulo-goncalves/)",
+		"description": "# 📌 ServerRest_API\n\n- Descrição: é uma API REST gratuita que simula uma loja virtual com intuito de servir de material de estudos de testes de API.\n    \n- Documentação: [ServeRest Swagger](https://serverest.dev/#/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "12268149",
 		"_collection_link": "https://restless-eclipse-911620.postman.co/workspace/Estudos~39778abb-7414-43e0-af4b-c1d4996580bb/collection/12268149-b830bc06-e941-4453-9c38-b27ff125e602?action=share&source=collection_link&creator=12268149"
@@ -27,8 +27,8 @@
 									"    pm.response.to.have.status(\"Unauthorized\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -119,8 +119,8 @@
 									"    pm.response.to.have.status(\"Bad Request\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -216,8 +216,8 @@
 									"    pm.response.to.have.status(\"Bad Request\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -308,8 +308,8 @@
 									"    pm.response.to.have.status(\"Bad Request\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -365,7 +365,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"teste@teste.com\",\r\n    \"password\": \"\"\r\n}",
+							"raw": "{\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -400,8 +400,8 @@
 									"    pm.response.to.have.status(\"Bad Request\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -491,8 +491,8 @@
 									"    pm.response.to.have.status(\"Unauthorized\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -548,7 +548,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"teste@qa.com\",\r\n    \"password\": \"a\"\r\n}",
+							"raw": "{\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"a\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -593,8 +593,8 @@
 									"    pm.response.to.have.status(\"Created\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -646,7 +646,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -685,8 +685,8 @@
 									"    pm.response.to.have.status(\"OK\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -791,8 +791,8 @@
 									"    pm.response.to.have.status(\"Created\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -844,7 +844,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -878,8 +878,8 @@
 									"    pm.response.to.have.status(\"OK\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"V03- Validar se o tempo de resposta é <2msg\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"V03- Validar se o tempo de resposta é <2seg\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"V04- Validar msg de alerta\", function () {\r",
@@ -994,7 +994,7 @@
 			]
 		},
 		{
-			"name": "Usuários",
+			"name": "✅Usuários",
 			"item": [
 				{
 					"name": "✅Buscar",
@@ -1085,7 +1085,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2273,8 +2273,8 @@
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -2313,12 +2313,24 @@
 											"pm.environment.set(\"schema\", {\r",
 											"  \"type\": \"object\",\r",
 											"  \"properties\": {\r",
-											"    \"message\": {\r",
+											"    \"nome\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"email\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"password\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"administrador\": {\r",
 											"      \"type\": \"string\"\r",
 											"    }\r",
 											"  },\r",
 											"  \"required\": [\r",
-											"    \"message\"\r",
+											"    \"nome\",\r",
+											"    \"email\",\r",
+											"    \"password\",\r",
+											"    \"administrador\"\r",
 											"  ]\r",
 											"}\r",
 											")"
@@ -2366,8 +2378,8 @@
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -2394,12 +2406,12 @@
 											"pm.environment.set(\"schema\", {\r",
 											"  \"type\": \"object\",\r",
 											"  \"properties\": {\r",
-											"    \"message\": {\r",
+											"    \"nome\": {\r",
 											"      \"type\": \"string\"\r",
 											"    }\r",
 											"  },\r",
 											"  \"required\": [\r",
-											"    \"message\"\r",
+											"    \"nome\"\r",
 											"  ]\r",
 											"}\r",
 											")"
@@ -2415,7 +2427,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2447,8 +2459,8 @@
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -2475,12 +2487,12 @@
 											"pm.environment.set(\"schema\", {\r",
 											"  \"type\": \"object\",\r",
 											"  \"properties\": {\r",
-											"    \"message\": {\r",
+											"    \"email\": {\r",
 											"      \"type\": \"string\"\r",
 											"    }\r",
 											"  },\r",
 											"  \"required\": [\r",
-											"    \"message\"\r",
+											"    \"email\"\r",
 											"  ]\r",
 											"}\r",
 											")"
@@ -2496,7 +2508,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2528,8 +2540,8 @@
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -2556,12 +2568,12 @@
 											"pm.environment.set(\"schema\", {\r",
 											"  \"type\": \"object\",\r",
 											"  \"properties\": {\r",
-											"    \"message\": {\r",
+											"    \"password\": {\r",
 											"      \"type\": \"string\"\r",
 											"    }\r",
 											"  },\r",
 											"  \"required\": [\r",
-											"    \"message\"\r",
+											"    \"password\"\r",
 											"  ]\r",
 											"}\r",
 											")"
@@ -2577,7 +2589,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"\",\r\n    \"administrador\": \"false\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"\",\r\n    \"administrador\": \"false\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2603,25 +2615,23 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"pm.test(\"V01- Validar o nome do Status Code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"administrador deve ser 'true' ou 'false'\");\r",
-											"});\r",
-											"// Check response time is less than 300ms\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Validate response structure\r",
-											"pm.test(\"Response has expected properties\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response).to.have.property(\"administrador\");\r",
+											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"administrador deve ser 'true' ou 'false'\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors:true, verbose:true})\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
@@ -2638,12 +2648,12 @@
 											"pm.environment.set(\"schema\", {\r",
 											"  \"type\": \"object\",\r",
 											"  \"properties\": {\r",
-											"    \"message\": {\r",
+											"    \"administrador\": {\r",
 											"      \"type\": \"string\"\r",
 											"    }\r",
 											"  },\r",
 											"  \"required\": [\r",
-											"    \"message\"\r",
+											"    \"administrador\"\r",
 											"  ]\r",
 											"}\r",
 											")"
@@ -2659,7 +2669,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2691,12 +2701,93 @@
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"email deve ser um email válido\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors:true, verbose:true})\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"email\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"email\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"teste###qa.com\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/usuarios",
+									"host": [
+										"{{base_URL}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[CT007]Validar email ja cadastrado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"pm.test(\"V01- Validar o nome do Status Code\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"    pm.response.to.have.status(\"Bad Request\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de retorno\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");\r",
 											"});\r",
 											"\r",
 											"const Ajv = require(\"ajv\")\r",
@@ -2740,92 +2831,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"teste###qa.com\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"false\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_URL}}/usuarios",
-									"host": [
-										"{{base_URL}}"
-									],
-									"path": [
-										"usuarios"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "[CT007]Validar email ja cadastrado",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"\r",
-											"pm.test(\"V01- Validar o nome do Status Code\", function () {\r",
-											"    pm.response.to.have.status(201);\r",
-											"    pm.response.to.have.status(\"Created\");\r",
-											"});\r",
-											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
-											"});\r",
-											"\r",
-											"const Ajv = require(\"ajv\")\r",
-											"const ajv = new Ajv({allErrors:true, verbose:true})\r",
-											"pm.test('V04- Validar o schema do contrato', function () {\r",
-											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"pm.environment.unset(\"schema\")\r",
-											"pm.environment.set(\"schema\", {\r",
-											"  \"type\": \"object\",\r",
-											"  \"properties\": {\r",
-											"    \"message\": {\r",
-											"      \"type\": \"string\"\r",
-											"    },\r",
-											"    \"_id\": {\r",
-											"      \"type\": \"string\"\r",
-											"    }\r",
-											"  },\r",
-											"  \"required\": [\r",
-											"    \"message\",\r",
-											"    \"_id\"\r",
-											"  ]\r",
-											"}\r",
-											")"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"email@usado.com\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"test@teste.com\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2857,8 +2863,8 @@
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -2885,12 +2891,12 @@
 											"pm.environment.set(\"schema\", {\r",
 											"  \"type\": \"object\",\r",
 											"  \"properties\": {\r",
-											"    \"message\": {\r",
+											"    \"administrador\": {\r",
 											"      \"type\": \"string\"\r",
 											"    }\r",
 											"  },\r",
 											"  \"required\": [\r",
-											"    \"message\"\r",
+											"    \"administrador\"\r",
 											"  ]\r",
 											"}\r",
 											")"
@@ -2906,7 +2912,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"algo\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"{{$randomAbbreviation}}\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2938,8 +2944,8 @@
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -2991,7 +2997,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3023,8 +3029,8 @@
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta do campo nome\", function () {\r",
@@ -3076,7 +3082,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3121,6 +3127,7 @@
 											"pm.environment.set(\"login_pass\", login_pass);\r",
 											"pm.environment.unset(\"login_nome\");\r",
 											"pm.environment.set(\"login_nome\", login_nome);\r",
+											"pm.environment.set(\"newEmail\", login_nome + \"@test.com\");\r",
 											"//==================================================================\r",
 											"\r",
 											"//Capturando o ID do usuário criado para uso futuro\r",
@@ -3136,8 +3143,8 @@
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
@@ -3189,7 +3196,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3221,8 +3228,8 @@
 											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
@@ -3270,7 +3277,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{$randomFullName}}\",\r\n    \"email\": \"{{login_email}}\",\r\n    \"password\": \"{{login_pass}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3299,16 +3306,16 @@
 										"exec": [
 											"\r",
 											"pm.test(\"V01- Validar o Status Code\", function () {\r",
-											"    pm.response.to.have.status(201);\r",
-											"    pm.response.to.have.status(\"Created\");\r",
+											"    pm.response.to.have.status(200);\r",
+											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"Registro alterado com sucesso\");\r",
 											"});\r",
 											"\r",
 											"const Ajv = require(\"ajv\")\r",
@@ -3352,7 +3359,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{login_nome}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{login_pass}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3434,7 +3441,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{login_nome}}\",\r\n    \"email\": \"{{login_email}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3467,8 +3474,8 @@
 											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
@@ -3516,7 +3523,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{login_nome}}\",\r\n    \"email\": \"{{login_email}}\",\r\n    \"password\": \"{{login_pass}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3549,8 +3556,8 @@
 											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
@@ -3598,7 +3605,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{login_nome}}\",\r\n    \"email\": \"{{login_email}}\",\r\n    \"password\": \"{{login_pass}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3631,8 +3638,8 @@
 											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
@@ -3680,7 +3687,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3713,8 +3720,8 @@
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"V02- Validar se o tempo de resposta é <2msg\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
@@ -3766,7 +3773,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3774,13 +3781,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_URL}}/usuarios/naoendocntrado@11155",
+									"raw": "{{base_URL}}/usuarios/{{newEmail}}",
 									"host": [
 										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios",
-										"naoendocntrado@11155"
+										"{{newEmail}}"
 									]
 								}
 							},
@@ -3789,7 +3796,7 @@
 					]
 				},
 				{
-					"name": "Excluir",
+					"name": "✅Excluir",
 					"item": [
 						{
 							"name": "Cadastro de usuário",
@@ -3798,61 +3805,81 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//SANVANDO O RETORNO DA REQUISIÇÃO\r",
-											"let response = pm.response.json();\r",
-											"let id = response._id;\r",
-											"pm.globals.set(\"id_user_exc\", id);\r",
-											"\r",
-											"\r",
-											"//===========================================\r",
-											"//SALVANDO O REQUEST BODY DA REQUISIÇÃO\r",
-											"let requestBody = JSON.parse(pm.request.body.raw);\r",
+											"const requestBody = JSON.parse(pm.request.body.raw);\r",
 											"\r",
 											"// Pegar campos específicos do body\r",
-											"let username = requestBody.nome;\r",
-											"let email = requestBody.email;\r",
-											"let password = requestBody.password;\r",
-											"let adm = requestBody.administrador;\r",
+											"const login_email = requestBody.email;\r",
+											"const login_pass = requestBody.password;\r",
+											"const login_nome = requestBody.nome;\r",
 											"\r",
 											"// Armazena em variáveis de ambiente\r",
-											"pm.environment.set(\"nome_exc\", username);\r",
-											"pm.environment.set(\"email_exc\", email);\r",
-											"pm.environment.set(\"pass_exc\", password);\r",
-											"pm.environment.set(\"adm_exc\", adm);\r",
+											"pm.environment.unset(\"login_email\");\r",
+											"pm.environment.set(\"login_email\", login_email);\r",
+											"pm.environment.unset(\"login_pass\");\r",
+											"pm.environment.set(\"login_pass\", login_pass);\r",
+											"pm.environment.unset(\"login_nome\");\r",
+											"pm.environment.set(\"login_nome\", login_nome);\r",
+											"pm.environment.set(\"newEmail\", login_nome + \"@test.com\");\r",
+											"//==================================================================\r",
 											"\r",
-											"// Log no console para conferir\r",
-											"console.log(\"Nome salvo:\", username);\r",
-											"console.log(\"Email salvo:\", email);\r",
-											"console.log(\"Senha salvo:\", password);\r",
-											"console.log(\"Admin salvo\", adm);\r",
-											"//========================================================\r",
+											"//Capturando o ID do usuário criado para uso futuro\r",
+											"const response = pm.response.json();\r",
+											"const id_user = response._id;\r",
+											"pm.environment.unset(\"id_user\");\r",
+											"pm.environment.set(\"id_user\", id_user);\r",
 											"\r",
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 201\", function () {\r",
+											"\r",
+											"//===================================================================\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(201);\r",
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
-											"    pm.expect(pm.response.text()).to.include(\"_id\");\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								},
 								{
 									"listen": "prerequest",
 									"script": {
 										"exec": [
-											""
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"_id\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"    \"_id\"\r",
+											"  ]\r",
+											"}\r",
+											")"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -3861,7 +3888,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3869,9 +3896,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios",
+									"raw": "{{base_URL}}/usuarios",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -3887,31 +3914,52 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 405\", function () {\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(405);\r",
 											"    pm.response.to.have.status(\"Method Not Allowed\");\r",
 											"});\r",
 											"\r",
-											"// Check the response time is less than 400ms\r",
-											"pm.test(\"Response time is less than 400ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Não é possível realizar DELETE\");\r",
 											"});\r",
 											"\r",
-											"// Verify that the response body has a message property\r",
-											"pm.test(\"Response body has a message property\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response).to.have.property(\"message\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -3928,9 +3976,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios?_id={{id_user_exc}}",
+									"raw": "{{base_URL}}/usuarios?_id={{idExc}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -3938,7 +3986,7 @@
 									"query": [
 										{
 											"key": "_id",
-											"value": "{{id_user_exc}}"
+											"value": "{{idExc}}"
 										}
 									]
 								}
@@ -3952,36 +4000,52 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 405\", function () {\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(405);\r",
 											"    pm.response.to.have.status(\"Method Not Allowed\");\r",
 											"});\r",
 											"\r",
-											"// Verify the response status code\r",
-											"pm.test(\"Status code is 405\", function () {\r",
-											"    pm.expect(pm.response.code).to.equal(405);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Não é possível realizar DELETE\");\r",
 											"});\r",
 											"\r",
-											"// Validate the response body structure\r",
-											"const responseBody = pm.response.json();\r",
-											"pm.test(\"Response body has message property\", function () {\r",
-											"    pm.expect(responseBody).to.have.property(\"message\");\r",
-											"});\r",
-											"\r",
-											"// Check that the message property is a string\r",
-											"pm.test(\"Message property is a string\", function () {\r",
-											"    pm.expect(responseBody.message).to.be.a('string');\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -3998,9 +4062,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios?nome={{nome_exc}}",
+									"raw": "{{base_URL}}/usuarios?nome={{nameExc}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -4008,7 +4072,7 @@
 									"query": [
 										{
 											"key": "nome",
-											"value": "{{nome_exc}}"
+											"value": "{{nameExc}}"
 										}
 									]
 								}
@@ -4022,38 +4086,52 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 405\", function () {\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(405);\r",
 											"    pm.response.to.have.status(\"Method Not Allowed\");\r",
 											"});\r",
 											"\r",
-											"// Check the response status code\r",
-											"pm.test(\"Status code is 405\", function () {\r",
-											"    pm.expect(pm.response.code).to.equal(405);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Não é possível realizar DELETE\");\r",
 											"});\r",
 											"\r",
-											"// Parse the response body\r",
-											"const responseBody = pm.response.json();\r",
-											"\r",
-											"// Check if the message property exists\r",
-											"pm.test(\"Response has message property\", function () {\r",
-											"    pm.expect(responseBody).to.have.property(\"message\");\r",
-											"});\r",
-											"\r",
-											"// Check if the message is a string\r",
-											"pm.test(\"Message is a string\", function () {\r",
-											"    pm.expect(responseBody.message).to.be.a(\"string\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4070,9 +4148,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios?administrador={{adm_exc}}",
+									"raw": "{{base_URL}}/usuarios?administrador=true",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -4080,7 +4158,7 @@
 									"query": [
 										{
 											"key": "administrador",
-											"value": "{{adm_exc}}"
+											"value": "true"
 										}
 									]
 								}
@@ -4094,29 +4172,52 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 405\", function () {\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(405);\r",
 											"    pm.response.to.have.status(\"Method Not Allowed\");\r",
 											"});\r",
 											"\r",
-											"// Test for successful response status code\r",
-											"pm.test(\"Status code is 405\", function () {\r",
-											"    pm.expect(pm.response.code).to.equal(405);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Test for response time\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Não é possível realizar DELETE\");\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});"
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4133,9 +4234,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios?password={{pass_exc}}",
+									"raw": "{{base_URL}}/usuarios?password={{passExc}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -4143,7 +4244,7 @@
 									"query": [
 										{
 											"key": "password",
-											"value": "{{pass_exc}}"
+											"value": "{{passExc}}"
 										}
 									]
 								}
@@ -4157,36 +4258,52 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 405\", function () {\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(405);\r",
 											"    pm.response.to.have.status(\"Method Not Allowed\");\r",
 											"});\r",
 											"\r",
-											"// Check response time\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Não é possível realizar DELETE\");\r",
 											"});\r",
 											"\r",
-											"// Validate response body structure\r",
-											"const response = pm.response.json();\r",
-											"pm.test(\"Response body has a message property\", function () {\r",
-											"    pm.expect(response).to.have.property(\"message\");\r",
-											"});\r",
-											"\r",
-											"// Check that the message is a string\r",
-											"pm.test(\"Message is a string\", function () {\r",
-											"    pm.expect(response.message).to.be.a(\"string\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4203,9 +4320,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios?email={{email_exc}}",
+									"raw": "{{base_URL}}/usuarios?email={{emailExc}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -4213,7 +4330,7 @@
 									"query": [
 										{
 											"key": "email",
-											"value": "{{email_exc}}"
+											"value": "{{emailExc}}"
 										}
 									]
 								}
@@ -4238,41 +4355,44 @@
 											"    pm.expect(pm.response.text()).to.include(\"Registro excluído com sucesso\");\r",
 											"});\r",
 											"\r",
-											"// Check response status code\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.expect(pm.response.code).to.equal(200);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check response time\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
-											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});\r",
-											"\r",
-											"// Validate message in response body\r",
-											"pm.test(\"Response message is correct\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response.message).to.exist;\r",
-											"    pm.expect(response.message).to.equal(\"Registro excluído com sucesso\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								},
 								{
 									"listen": "prerequest",
 									"script": {
 										"exec": [
-											""
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4289,13 +4409,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios/{{id_user_exc}}",
+									"raw": "{{base_URL}}/usuarios/{{id_user}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios",
-										"{{id_user_exc}}"
+										"{{id_user}}"
 									]
 								}
 							},
@@ -4309,46 +4429,53 @@
 									"script": {
 										"exec": [
 											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"    pm.response.to.have.status(\"OK\");\r",
+											"pm.test(\"Status code retorna 405\", function () {\r",
+											"    pm.response.to.have.status(405);\r",
+											"    pm.response.to.have.status(\"Method Not Allowed\");\r",
 											"});\r",
 											"\r",
 											"//RETORNO DO RESPONSE\r",
 											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Nenhum registro excluído\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"Não é possível realizar DELETE\");\r",
 											"});\r",
 											"\r",
-											"// Check response time is less than 500ms\r",
-											"pm.test(\"Response time is less than 500ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});\r",
 											"\r",
-											"// Check if response body has the expected message structure\r",
-											"const response = pm.response.json();\r",
-											"pm.test(\"Response body has message property\", function () {\r",
-											"    pm.expect(response).to.have.property(\"message\");\r",
-											"    pm.expect(response.message).to.be.a(\"string\");\r",
-											"});\r",
-											""
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								},
 								{
 									"listen": "prerequest",
 									"script": {
 										"exec": [
-											""
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4365,9 +4492,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios/{{id_user_exc}}",
+									"raw": "{{base_URL}}/usuarios/{{id_user_exc}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios",
@@ -4396,7 +4523,8 @@
 											"});"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								},
 								{
@@ -4406,7 +4534,8 @@
 											"pm.environment.set(\"{{registro_id}}\", \"{{id}}\")"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4423,9 +4552,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios/{{id}}",
+									"raw": "{{base_URL}}/usuarios/{{id}}",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios",
@@ -4435,6 +4564,33 @@
 							},
 							"response": []
 						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {},
+								"exec": [
+									"pm.environment.set(\"idExc\", \"123\");\r",
+									"pm.environment.set(\"nameExc\", \"excluir\");\r",
+									"pm.environment.set(\"emailExc\", \"excluir@excluir\");\r",
+									"pm.environment.set(\"passExc\", \"abc123\");"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {},
+								"exec": [
+									""
+								]
+							}
+						}
 					]
 				}
 			]
@@ -4443,7 +4599,7 @@
 			"name": "Produtos",
 			"item": [
 				{
-					"name": "Cadastrar",
+					"name": "✅Cadastrar",
 					"item": [
 						{
 							"name": "[CT001]Validar token de acesso ausente",
@@ -4463,26 +4619,44 @@
 											"    pm.expect(pm.response.text()).to.include(\"Token de acesso ausente, inválido, expirado ou usuário do token não existe mais\");\r",
 											"});\r",
 											"\r",
-											"// Check the response time is less than 300ms\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											"\r",
-											"// Validate the structure of the response body\r",
-											"pm.test(\"Response body has a message property\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response).to.have.property(\"message\");\r",
-											"    pm.expect(response.message).to.be.a(\"string\");\r",
-											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4499,258 +4673,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
-									],
-									"path": [
-										"produtos"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Cadastrar usuário não Admin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"//SANVANDO O RETORNO DA REQUISIÇÃO\r",
-											"let response = pm.response.json();\r",
-											"let id = response._id;\r",
-											"pm.globals.set(\"id_user_nAdm\", id);\r",
-											"\r",
-											"\r",
-											"//===========================================\r",
-											"//SALVANDO O REQUEST BODY DA REQUISIÇÃO\r",
-											"let requestBody = JSON.parse(pm.request.body.raw);\r",
-											"\r",
-											"// Pegar campos específicos do body\r",
-											"let username = requestBody.nome;\r",
-											"let email = requestBody.email;\r",
-											"let password = requestBody.password;\r",
-											"let adm = requestBody.administrador;\r",
-											"\r",
-											"// Armazena em variáveis de ambiente\r",
-											"pm.environment.set(\"nome_nAdm\", username);\r",
-											"pm.environment.set(\"email_nAdm\", email);\r",
-											"pm.environment.set(\"pass_nAdm\", password);\r",
-											"pm.environment.set(\"adm_nAdm\", adm);\r",
-											"\r",
-											"// Log no console para conferir\r",
-											"console.log(\"Nome salvo:\", username);\r",
-											"console.log(\"Email salvo:\", email);\r",
-											"console.log(\"Senha salvo:\", password);\r",
-											"console.log(\"Admin salvo\", adm);\r",
-											"//========================================================\r",
-											"\r",
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 201\", function () {\r",
-											"    pm.response.to.have.status(201);\r",
-											"    pm.response.to.have.status(\"Created\");\r",
-											"});\r",
-											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
-											"    pm.expect(pm.response.text()).to.include(\"_id\");\r",
-											"});\r",
-											"\r",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"false\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios",
-									"host": [
-										"{{URL_ServerRest}}"
-									],
-									"path": [
-										"usuarios"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Logar com usuario não Admin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"// Converte o response em JSON\r",
-											"let response = pm.response.json();\r",
-											"\r",
-											"// Supondo que o token venha como \"Bearer xxxxxxx\"\r",
-											"let rawToken = response.authorization;\r",
-											"\r",
-											"// Remove o prefixo \"Bearer \" se existir\r",
-											"let token = rawToken ? rawToken.replace(/^Bearer\\s+/i, '') : null;\r",
-											"\r",
-											"// Salva apenas o token limpo em variável de ambiente\r",
-											"if (token) {\r",
-											"    pm.globals.set(\"authTokenNaoAdmin\", token);\r",
-											"    console.log(\"Token capturado (sem Bearer):\", token);\r",
-											"} else {\r",
-											"    console.warn(\"⚠️ Nenhum token encontrado no response.\");\r",
-											"}\r",
-											"//=========================================\r",
-											"\r",
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Retorna o Status Code 200 Bad Request\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"    pm.response.to.have.status(\"OK\");\r",
-											"});\r",
-											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Login realizado com sucesso\")\r",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "name",
-										"value": "Authorization",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{email_nAdm}}\",\r\n    \"password\": \"{{pass_nAdm}}\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL_ServerRest}}/login?Name=Authorization ",
-									"host": [
-										"{{URL_ServerRest}}"
-									],
-									"path": [
-										"login"
-									],
-									"query": [
-										{
-											"key": "Name",
-											"value": "Authorization "
-										},
-										{
-											"key": "In",
-											"value": "header",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "[CT002]Validar cadastro com usuário não Admin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 403\", function () {\r",
-											"    pm.response.to.have.status(403);\r",
-											"    pm.response.to.have.status(\"Forbidden\");\r",
-											"});\r",
-											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Rota exclusiva para administradores\");\r",
-											"});\r",
-											"\r",
-											"// Check response time is less than 300ms\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
-											"});\r",
-											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});\r",
-											"\r",
-											"// Validate the structure of the response body\r",
-											"pm.test(\"Response body has the correct structure\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response).to.have.property(\"message\");\r",
-											"    pm.expect(response.message).to.be.a('string');\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{authTokenNaoAdmin}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": {{$randomPrice}},\r\n    \"descricao\": \"{{$randomProduct}}\",\r\n    \"quantidade\": \"{{qde}}\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
-									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -4766,61 +4691,81 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//SANVANDO O RETORNO DA REQUISIÇÃO\r",
-											"let response = pm.response.json();\r",
-											"let id = response._id;\r",
-											"pm.globals.set(\"id_user_Adm\", id);\r",
-											"\r",
-											"\r",
-											"//===========================================\r",
-											"//SALVANDO O REQUEST BODY DA REQUISIÇÃO\r",
-											"let requestBody = JSON.parse(pm.request.body.raw);\r",
+											"const requestBody = JSON.parse(pm.request.body.raw);\r",
 											"\r",
 											"// Pegar campos específicos do body\r",
-											"let username = requestBody.nome;\r",
-											"let email = requestBody.email;\r",
-											"let password = requestBody.password;\r",
-											"let adm = requestBody.administrador;\r",
+											"const login_email = requestBody.email;\r",
+											"const login_pass = requestBody.password;\r",
+											"const login_nome = requestBody.nome;\r",
 											"\r",
 											"// Armazena em variáveis de ambiente\r",
-											"pm.environment.set(\"nome_Adm\", username);\r",
-											"pm.environment.set(\"email_Adm\", email);\r",
-											"pm.environment.set(\"pass_Adm\", password);\r",
-											"pm.environment.set(\"adm_Adm\", adm);\r",
+											"pm.environment.unset(\"login_email\");\r",
+											"pm.environment.set(\"login_email\", login_email);\r",
+											"pm.environment.unset(\"login_pass\");\r",
+											"pm.environment.set(\"login_pass\", login_pass);\r",
+											"pm.environment.unset(\"login_nome\");\r",
+											"pm.environment.set(\"login_nome\", login_nome);\r",
+											"pm.environment.set(\"newEmail\", login_nome + \"@test.com\");\r",
+											"//==================================================================\r",
 											"\r",
-											"// Log no console para conferir\r",
-											"console.log(\"Nome salvo:\", username);\r",
-											"console.log(\"Email salvo:\", email);\r",
-											"console.log(\"Senha salvo:\", password);\r",
-											"console.log(\"Admin salvo\", adm);\r",
-											"//========================================================\r",
+											"//Capturando o ID do usuário criado para uso futuro\r",
+											"const response = pm.response.json();\r",
+											"const id_user = response._id;\r",
+											"pm.environment.unset(\"id_user\");\r",
+											"pm.environment.set(\"id_user\", id_user);\r",
 											"\r",
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 201\", function () {\r",
+											"\r",
+											"//===================================================================\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
 											"    pm.response.to.have.status(201);\r",
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
-											"    pm.expect(pm.response.text()).to.include(\"_id\");\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 											"});\r",
 											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								},
 								{
 									"listen": "prerequest",
 									"script": {
 										"exec": [
-											""
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"_id\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"    \"_id\"\r",
+											"  ]\r",
+											"}\r",
+											")"
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4829,7 +4774,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{name}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{senha_gerada}}\",\r\n    \"administrador\": \"true\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"true\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4837,9 +4782,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/usuarios",
+									"raw": "{{base_URL}}/usuarios",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"usuarios"
@@ -4855,7 +4800,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"// Converte o response em JSON\r",
+											"// Fixed variable redeclaration\r",
 											"let response = pm.response.json();\r",
 											"\r",
 											"// Supondo que o token venha como \"Bearer xxxxxxx\"\r",
@@ -4863,29 +4808,64 @@
 											"\r",
 											"// Remove o prefixo \"Bearer \" se existir\r",
 											"let token = rawToken ? rawToken.replace(/^Bearer\\s+/i, '') : null;\r",
+											"pm.environment.set(\"authTokenAdmin\", token);\r",
 											"\r",
-											"// Salva apenas o token limpo em variável de ambiente\r",
-											"if (token) {\r",
-											"    pm.globals.set(\"authTokenAdmin\", token);\r",
-											"    console.log(\"Token capturado (sem Bearer):\", token);\r",
-											"} else {\r",
-											"    console.warn(\"⚠️ Nenhum token encontrado no response.\");\r",
-											"}\r",
 											"//=========================================\r",
+											"const token_adm = response.authorization;\r",
+											"pm.environment.unset(\"token_adm\");\r",
+											"pm.environment.set(\"token_adm\", token_adm);\r",
 											"\r",
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Retorna o Status Code 200 Bad Request\", function () {\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
 											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"Login realizado com sucesso\")\r",
-											"});"
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Login realizado com sucesso\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"authorization\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"    \"authorization\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -4903,7 +4883,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{email_Adm}}\",\r\n    \"password\": \"{{pass_Adm}}\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{login_email}}\",\r\n    \"password\": \"{{login_pass}}\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4911,9 +4891,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/login?Name=Authorization ",
+									"raw": "{{base_URL}}/login",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"login"
@@ -4921,7 +4901,8 @@
 									"query": [
 										{
 											"key": "Name",
-											"value": "Authorization "
+											"value": "Authorization ",
+											"disabled": true
 										},
 										{
 											"key": "In",
@@ -4934,53 +4915,165 @@
 							"response": []
 						},
 						{
+							"name": "[CT002]Validar string no campo preco",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"    pm.response.to.have.status(\"Bad Request\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"preco deve ser um número\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"preco\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"preco\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{authTokenAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"{{$randomAdjective}}\",\r\n    \"descricao\": \"{{$randomPhrase}}\",\r\n    \"quantidade\": \"{{$randomInt}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/produtos",
+									"host": [
+										"{{base_URL}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "[CT003]Validar cadastro com campos em branco",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"nome não pode ficar em branco\");\r",
 											"    pm.expect(pm.response.text()).to.include(\"preco deve ser um número\");\r",
 											"    pm.expect(pm.response.text()).to.include(\"descricao não pode ficar em branco\");\r",
 											"    pm.expect(pm.response.text()).to.include(\"quantidade deve ser um número\");\r",
 											"});\r",
 											"\r",
-											"// Check response time is less than 300ms\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
-											"});\r",
-											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});\r",
-											"\r",
-											"// Validate that the response body has the expected properties\r",
-											"const response = pm.response.json();\r",
-											"pm.test(\"Response body has the expected properties\", function () {\r",
-											"    pm.expect(response).to.have.all.keys('nome', 'preco', 'descricao', 'quantidade');\r",
-											"});\r",
-											"\r",
-											"// Validate the specific error messages in the response body\r",
-											"pm.test(\"Error messages are present in the response\", function () {\r",
-											"    pm.expect(response.nome).to.equal(\"nome não pode ficar em branco\");\r",
-											"    pm.expect(response.preco).to.equal(\"preco deve ser um número\");\r",
-											"    pm.expect(response.descricao).to.equal(\"descricao não pode ficar em branco\");\r",
-											"    pm.expect(response.quantidade).to.equal(\"quantidade deve ser um número\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"nome\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"preco\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"descricao\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"quantidade\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"nome\",\r",
+											"    \"preco\",\r",
+											"    \"descricao\",\r",
+											"    \"quantidade\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5007,9 +5100,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -5025,42 +5118,53 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"nome não pode ficar em branco\");\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
-											"\r",
-											"// Check response time\r",
-											"pm.test(\"Response time is less than 500ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-											"});\r",
-											"\r",
-											"// Parse response body\r",
-											"const response = pm.response.json();\r",
-											"\r",
-											"// Check if response has 'nome' field\r",
-											"pm.test(\"Response has 'nome' field\", function () {\r",
-											"    pm.expect(response).to.have.property('nome');\r",
-											"});\r",
-											"\r",
-											"// Check if 'nome' field is a string\r",
-											"pm.test(\"'nome' field is a string\", function () {\r",
-											"    pm.expect(response.nome).to.be.a('string');\r",
-											"});"
+											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"nome\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"nome\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5079,7 +5183,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"\",\r\n    \"preco\": {{qde_gerada}},\r\n    \"descricao\": \"{{$randomProductMaterial}}\",\r\n    \"quantidade\": {{qde_gerada}}\r\n}",
+									"raw": "{\r\n    \"nome\": \"\",\r\n    \"preco\": {{$randomInt}},\r\n    \"descricao\": \"{{$randomProductMaterial}}\",\r\n    \"quantidade\": {{$randomInt}}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5087,9 +5191,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -5105,36 +5209,53 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"preco deve ser um número\");\r",
 											"});\r",
 											"\r",
-											"// Check the response time is less than 500ms\r",
-											"pm.test(\"Response time is less than 500ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-											"});\r",
-											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});\r",
-											"\r",
-											"// Validate the structure of the response body\r",
-											"pm.test(\"Response body has required properties\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response).to.have.property(\"preco\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"preco\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"preco\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5153,7 +5274,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"\",\r\n    \"descricao\": \"{{$randomProductMaterial}}\",\r\n    \"quantidade\": {{qde_gerada}}\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"\",\r\n    \"descricao\": \"{{$randomPhrase}}\",\r\n    \"quantidade\": {{$randomInt}}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5161,9 +5282,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -5179,42 +5300,53 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
-											"pm.test(\"Exibe a msg de alerta\", function () {\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"descricao não pode ficar em branco\");\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});\r",
-											"\r",
-											"// Validate response body structure\r",
-											"pm.test(\"Response body has descricao property\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response).to.have.property(\"descricao\");\r",
-											"});\r",
-											"\r",
-											"// Validate descricao property is a string\r",
-											"pm.test(\"descricao property is a string\", function () {\r",
-											"    const response = pm.response.json();\r",
-											"    pm.expect(response.descricao).to.be.a(\"string\");\r",
-											"});\r",
-											"\r",
-											"// Check response time is within acceptable limit (e.g., less than 300ms)\r",
-											"pm.test(\"Response time is less than 300ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"descricao\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"descricao\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5233,7 +5365,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": {{qde_gerada}},\r\n    \"descricao\": \"\",\r\n    \"quantidade\": {{qde_gerada}}\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"{{$randomInt}}\",\r\n    \"descricao\": \"\",\r\n    \"quantidade\": \"{{$randomInt}}\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5241,9 +5373,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -5259,43 +5391,55 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
 											"pm.test(\"Exibe a msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"quantidade deve ser um número\");\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											"\r",
-											"// Check that the response body is valid JSON\r",
-											"pm.test(\"Response body is valid JSON\", function () {\r",
-											"    const responseBody = pm.response.json();\r",
-											"    pm.expect(responseBody).to.be.an(\"object\");\r",
-											"});\r",
-											"\r",
-											"// Check that the response body contains the 'quantidade' field\r",
-											"pm.test(\"Response body contains 'quantidade' field\", function () {\r",
-											"    const responseBody = pm.response.json();\r",
-											"    pm.expect(responseBody).to.have.property(\"quantidade\");\r",
-											"});\r",
-											"\r",
-											"// Check that the 'quantidade' field is a string\r",
-											"pm.test(\"'quantidade' field is a string\", function () {\r",
-											"    const responseBody = pm.response.json();\r",
-											"    pm.expect(responseBody.quantidade).to.be.a(\"string\");\r",
-											"});\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"quantidade\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"quantidade\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5314,7 +5458,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": {{qde_gerada}},\r\n    \"descricao\": \"{{$randomProductMaterial}}\",\r\n    \"quantidade\": \"\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": {{$randomInt}},\r\n    \"descricao\": \"{{$randomPhrase}}\",\r\n    \"quantidade\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5322,9 +5466,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -5360,34 +5504,61 @@
 											"pm.environment.set(\"desc_prod\", description);\r",
 											"pm.environment.set(\"qde_prod\", qde);\r",
 											"\r",
-											"// Log no console para conferir\r",
-											"console.log(\"Produto salvo:\", product);\r",
-											"console.log(\"Preço salvo:\", price);\r",
-											"console.log(\"Descrição salvo:\", description);\r",
-											"console.log(\"Qde salvo\", qde);\r",
 											"\r",
 											"//=========================\r",
 											"\r",
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 201\", function () {\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(201);\r",
 											"    pm.response.to.have.status(\"Created\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
 											"pm.test(\"Exibe a msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
 											"});\r",
 											"\r",
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"_id\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"    \"_id\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5406,7 +5577,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"{{qde_gerada}}\",\r\n    \"descricao\": \"{{$randomProductMaterial}}\",\r\n    \"quantidade\": \"{{qde_gerada}}\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"{{$randomInt}}\",\r\n    \"descricao\": \"{{$randomPhrase}}\",\r\n    \"quantidade\": \"{{$randomInt}}\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5414,9 +5585,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -5432,24 +5603,54 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//RETORNO DO CODIGO E O STATUS\r",
-											"pm.test(\"Status code retorna 400\", function () {\r",
+											"\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"    pm.response.to.have.status(\"Bad Request\");\r",
 											"});\r",
 											"\r",
-											"//RETORNO DO RESPONSE\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
 											"pm.test(\"Exibe a msg de alerta\", function () {\r",
 											"    pm.expect(pm.response.text()).to.include(\"Já existe produto com esse nome\");\r",
 											"});\r",
 											"\r",
-											"// Check content type of the response\r",
-											"pm.test(\"Response should have Content-Type as application/json\", function () {\r",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
-											"});"
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -5476,9 +5677,507 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL_ServerRest}}/produtos",
+									"raw": "{{base_URL}}/produtos",
 									"host": [
-										"{{URL_ServerRest}}"
+										"{{base_URL}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[CT010]Validar string no campo quantidade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"    pm.response.to.have.status(\"Bad Request\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"quantidade deve ser um número\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"quantidade\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"quantidade\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{authTokenAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"{{$randomProductName}}\",\r\n    \"preco\": \"{{$randomInt}}\",\r\n    \"descricao\": \"{{$randomPhrase}}\",\r\n    \"quantidade\": \"{{$randomAdjective}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/produtos",
+									"host": [
+										"{{base_URL}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cadastrar usuário não Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const requestBody = JSON.parse(pm.request.body.raw);\r",
+											"\r",
+											"// Pegar campos específicos do body\r",
+											"const login_email = requestBody.email;\r",
+											"const login_pass = requestBody.password;\r",
+											"const login_nome = requestBody.nome;\r",
+											"\r",
+											"// Armazena em variáveis de ambiente\r",
+											"pm.environment.unset(\"login_email\");\r",
+											"pm.environment.set(\"login_email\", login_email);\r",
+											"pm.environment.unset(\"login_pass\");\r",
+											"pm.environment.set(\"login_pass\", login_pass);\r",
+											"pm.environment.unset(\"login_nome\");\r",
+											"pm.environment.set(\"login_nome\", login_nome);\r",
+											"pm.environment.set(\"newEmail\", login_nome + \"@test.com\");\r",
+											"//==================================================================\r",
+											"\r",
+											"//Capturando o ID do usuário criado para uso futuro\r",
+											"const response = pm.response.json();\r",
+											"const id_user = response._id;\r",
+											"pm.environment.unset(\"id_user\");\r",
+											"pm.environment.set(\"id_user\", id_user);\r",
+											"\r",
+											"\r",
+											"//===================================================================\r",
+											"pm.test(\"V01- Validar o Status Code\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    pm.response.to.have.status(\"Created\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V04- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"_id\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"    \"_id\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"administrador\": \"false\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/usuarios",
+									"host": [
+										"{{base_URL}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logar com usuario não Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Fixed variable redeclaration\r",
+											"let response = pm.response.json();\r",
+											"\r",
+											"// Supondo que o token venha como \"Bearer xxxxxxx\"\r",
+											"let rawToken = response.authorization;\r",
+											"\r",
+											"// Remove o prefixo \"Bearer \" se existir\r",
+											"let token = rawToken ? rawToken.replace(/^Bearer\\s+/i, '') : null;\r",
+											"pm.environment.set(\"authTokenAdmin\", token);\r",
+											"\r",
+											"//=========================================\r",
+											"const token_adm = response.authorization;\r",
+											"pm.environment.unset(\"token_adm\");\r",
+											"pm.environment.set(\"token_adm\", token_adm);\r",
+											"\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"V03- Validar msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Login realizado com sucesso\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    },\r",
+											"    \"authorization\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\",\r",
+											"    \"authorization\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "name",
+										"value": "Authorization",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{login_email}}\",\r\n    \"password\": \"{{login_pass}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/login",
+									"host": [
+										"{{base_URL}}"
+									],
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "Name",
+											"value": "Authorization ",
+											"disabled": true
+										},
+										{
+											"key": "In",
+											"value": "header",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[CT011]Validar produto com usuário não Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"    pm.response.to.have.status(\"Forbidden\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Exibe a msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Rota exclusiva para administradores\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{authTokenAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"{{name_prod}}\",\r\n    \"preco\": \"{{price_prod}}\",\r\n    \"descricao\": \"{{desc_prod}}\",\r\n    \"quantidade\": \"{{qde_prod}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/produtos",
+									"host": [
+										"{{base_URL}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[CT012]Validar cadastro sem estar logado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"pm.test(\"V01- Validar o codigo do status code\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"    pm.response.to.have.status(\"Unauthorized\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"V02- Validar se o tempo de resposta é <2seg\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Exibe a msg de alerta\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Token de acesso ausente, inválido, expirado ou usuário do token não existe mais\");\r",
+											"});\r",
+											"\r",
+											"const Ajv = require(\"ajv\")\r",
+											"const ajv = new Ajv({allErrors: true, verbose: true});\r",
+											"pm.test('V05- Validar o schema do contrato', function () {\r",
+											"    pm.expect(ajv.validate(pm.environment.get('schema'), pm.response.json()), JSON.stringify(ajv.errors)).to.be.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.environment.unset(\"schema\")\r",
+											"pm.environment.set(\"schema\", {\r",
+											"  \"type\": \"object\",\r",
+											"  \"properties\": {\r",
+											"    \"message\": {\r",
+											"      \"type\": \"string\"\r",
+											"    }\r",
+											"  },\r",
+											"  \"required\": [\r",
+											"    \"message\"\r",
+											"  ]\r",
+											"}\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"{{name_prod}}\",\r\n    \"preco\": \"{{price_prod}}\",\r\n    \"descricao\": \"{{desc_prod}}\",\r\n    \"quantidade\": \"{{qde_prod}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_URL}}/produtos",
+									"host": [
+										"{{base_URL}}"
 									],
 									"path": [
 										"produtos"
@@ -9944,6 +10643,7 @@
 				"packages": {},
 				"requests": {},
 				"exec": [
+					"/*\r",
 					"//=================NAME=================\r",
 					"// Lista de nomes aleatórios\r",
 					"const names = [\"Lucas\", \"Ana\", \"Carlos\", \"Mariana\", \"João\", \"Isabela\", \"Pedro\", \"Lívia\", \"Felipe\", \"Rafaela\"];\r",
@@ -10040,7 +10740,9 @@
 					"    return quantidade;\r",
 					"}\r",
 					"let qde = generateQde(3);                //GERA A VARIAVEL NO POSTMAN\r",
-					"pm.environment.set(\"qde_gerada\", qde);     //ARMAZENA EM VARIÁVEL DO POSTMAN"
+					"pm.environment.set(\"qde_gerada\", qde);     //ARMAZENA EM VARIÁVEL DO POSTMAN\r",
+					"\r",
+					"*/"
 				]
 			}
 		},
