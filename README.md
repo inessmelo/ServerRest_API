@@ -119,6 +119,10 @@ Este repositório tem como único objetivo servir de espaço para estudos e test
 4. Expansão e detalhamento de cenários de teste dentro de cada requisição, cobrindo suas respectivas rotas.
 5. Geração de relatórios de execução por meio da integração do Newman.
 6. Automatizar a subida dos testes do Postman em tempo real para o GitHub sem efetuar comando GIT via SSH.
+7. Rodar na pipeline Gitction a automação  
+   7.1. Dificuldade: Codigo para automatizar onde quebrava a pipeline  
+   7.2. Identificar o erro - versão 
+   7.3. Resolver o conflito de versão e rodar td scrit da atuomação via pipeline a cada pull/push
  
 <br>
 <br>
