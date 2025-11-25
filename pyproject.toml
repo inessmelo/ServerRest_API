@@ -1,0 +1,20 @@
+[project]
+name = "serverrest-api"
+version = "0.1.0"
+description = "Teste automatizado com Robot Framework na API ServeRest"
+authors = [
+    {name = "Ines Melo",email = "prof.inesmelo@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "robotframework (>=7.3.2,<8.0.0)",
+    "robotframework-requests (>=0.9.7,<0.10.0)",
+    "robotframework-jsonvalidator (>=2.0.0,<3.0.0)",
+    "robotframework-jsonlibrary (>=0.5,<0.6)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
