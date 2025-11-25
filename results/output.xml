@@ -1,194 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-11-24T21:42:08.488837" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-11-24T21:50:22.125401" rpa="false" schemaversion="5">
 <suite id="s1" name="ServerRest API" source="D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API">
 <suite id="s1-s1" name="Test Api" source="D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\test_api">
 <suite id="s1-s1-s1" name="Test" source="D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\test_api\test">
-<suite id="s1-s1-s1-s1" name="Login" source="D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\test_api\test\login.robot">
-<test id="s1-s1-s1-s1-t1" name="Efetuar Login Com Sucesso" line="6">
+<suite id="s1-s1-s1-s1" name="User" source="D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\test_api\test\user.robot">
+<test id="s1-s1-s1-s1-t1" name="Criar um usuario sem email" line="121">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.062682" level="INFO">${headers} = {'Authorization': 'Authorization'}</msg>
+<msg time="2025-11-24T21:50:22.584617" level="FAIL">Variable '${token}' not found.</msg>
 <var>${headers}</var>
-<arg>Authorization=Authorization</arg>
+<arg>Authorization=Bearer ${token}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.061913" elapsed="0.001117"/>
+<status status="FAIL" start="2025-11-24T21:50:22.583664" elapsed="0.003934">Variable '${token}' not found.</status>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.064047" level="INFO">${body} = {'email': 'fulano@qa.com', 'password': 'teste'}</msg>
 <var>${body}</var>
-<arg>email=${email_default}</arg>
-<arg>password=${pass_default}</arg>
+<arg>password=teste</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.063466" elapsed="0.001091"/>
+<status status="NOT RUN" start="2025-11-24T21:50:22.587989" elapsed="0.000259"/>
 </kw>
 <kw name="POST" owner="RequestsLibrary">
-<msg time="2025-11-24T21:42:09.373640" level="INFO">POST Request : url=https://serverest.dev/login 
- path_url=/login 
- headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Authorization', 'Content-Length': '47', 'Content-Type': 'application/json'} 
- body=b'{"email": "fulano@qa.com", "password": "teste"}' 
- </msg>
-<msg time="2025-11-24T21:42:09.373942" level="INFO">POST Response : url=https://serverest.dev/login 
- status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'fb54909078f3dd46a3921d9fbeb23268;o=1', 'date': 'Tue, 25 Nov 2025 00:42:09 GMT', 'server': 'Google Frontend', 'Content-Length': '265'} 
- body={
-    "message": "Login realizado com sucesso",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzY0MDMxMzI5LCJleHAiOjE3NjQwMzE5Mjl9.8LkCUCKX3lwalBvKjyAvgRbF1UtCdTPqyV1CLpmyaQY"
-} 
- </msg>
-<msg time="2025-11-24T21:42:09.374418" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${BASE_URL}/login</arg>
 <arg>headers=${headers}</arg>
 <arg>json=${body}</arg>
 <arg>timeout=2000</arg>
-<arg>expected_status=200</arg>
+<arg>expected_status=400</arg>
 <doc>Sends a POST request.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.064989" elapsed="0.309774"/>
+<status status="NOT RUN" start="2025-11-24T21:50:22.588598" elapsed="0.000230"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${response.json()['message']}</arg>
-<arg>Login realizado com sucesso</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.375266" elapsed="0.001073"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-11-24T21:50:22.589111" elapsed="0.000164"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${response.json()}</arg>
-<arg>authorization</arg>
+<arg>mensagem</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.376704" elapsed="0.000668"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.378172" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>200</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.377637" elapsed="0.000767"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.379971" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzY0MDMxMzI5LCJleHAiOjE3NjQwMzE5Mjl9.8LkCUCKX3lwalBvKjyAvgRbF1UtCdTPqyV1CLpmyaQY</msg>
-<var>${token}</var>
-<arg>${response.json()['authorization']}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.378718" elapsed="0.001568"/>
-</kw>
-<doc>Testa o login com credenciais válidas</doc>
-<status status="PASS" start="2025-11-24T21:42:09.048409" elapsed="0.332195"/>
-</test>
-<test id="s1-s1-s1-s1-t2" name="Efetuar Login com email não cadastrado" line="30">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.393835" level="INFO">${body} = {'email': 'xxy@qa.com', 'password': 'teste'}</msg>
-<var>${body}</var>
-<arg>email=xxy@qa.com</arg>
-<arg>password=teste</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.393521" elapsed="0.000478"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.394741" level="INFO">${headers} = {'Authorization': 'Authorization'}</msg>
-<var>${headers}</var>
-<arg>Authorization=Authorization</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.394382" elapsed="0.000603"/>
-</kw>
-<kw name="POST" owner="RequestsLibrary">
-<msg time="2025-11-24T21:42:09.714560" level="INFO">POST Request : url=https://serverest.dev/login 
- path_url=/login 
- headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Authorization', 'Content-Length': '44', 'Content-Type': 'application/json'} 
- body=b'{"email": "xxy@qa.com", "password": "teste"}' 
- </msg>
-<msg time="2025-11-24T21:42:09.714996" level="INFO">POST Response : url=https://serverest.dev/login 
- status=401, reason=Unauthorized 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '21182f9648cad061554f2ce3954b4477', 'date': 'Tue, 25 Nov 2025 00:42:09 GMT', 'server': 'Google Frontend', 'Content-Length': '48'} 
- body={
-    "message": "Email e/ou senha inválidos"
-} 
- </msg>
-<msg time="2025-11-24T21:42:09.715352" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<var>${response}</var>
-<arg>url=${BASE_URL}/login</arg>
-<arg>json=${body}</arg>
-<arg>headers=${headers}</arg>
-<arg>expected_status=401</arg>
-<doc>Sends a POST request.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.395296" elapsed="0.320264"/>
+<status status="NOT RUN" start="2025-11-24T21:50:22.589472" elapsed="0.000104"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
-<arg>${response.json()['message']}</arg>
-<arg>Email e/ou senha inválidos</arg>
+<arg>${response.json()['mensagem']}</arg>
+<arg>"Email e senha são obrigatórios"</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.716145" elapsed="0.000847"/>
+<status status="NOT RUN" start="2025-11-24T21:50:22.589738" elapsed="0.000120"/>
 </kw>
-<status status="PASS" start="2025-11-24T21:42:09.384944" elapsed="0.332382"/>
+<doc>Cadastrar um novo usuario</doc>
+<status status="FAIL" start="2025-11-24T21:50:22.580019" elapsed="0.010081">Variable '${token}' not found.</status>
 </test>
-<test id="s1-s1-s1-s1-t3" name="Efetuar Login com email invalido" line="47">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.727857" level="INFO">${body} = {'email': 'fulano#qa.com', 'password': 'teste'}</msg>
-<var>${body}</var>
-<arg>email=fulano#qa.com</arg>
-<arg>password=teste</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.727472" elapsed="0.000595"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T21:42:09.728977" level="INFO">${headers} = {'Authorization': 'Authorization'}</msg>
-<var>${headers}</var>
-<arg>Authorization=Authorization</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.728527" elapsed="0.000811"/>
-</kw>
-<kw name="POST" owner="RequestsLibrary">
-<msg time="2025-11-24T21:42:10.019510" level="INFO">POST Request : url=https://serverest.dev/login 
- path_url=/login 
- headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Authorization', 'Content-Length': '47', 'Content-Type': 'application/json'} 
- body=b'{"email": "fulano#qa.com", "password": "teste"}' 
- </msg>
-<msg time="2025-11-24T21:42:10.019805" level="INFO">POST Response : url=https://serverest.dev/login 
- status=400, reason=Bad Request 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'fbeee43a372fd6e1bdc872536d553db1', 'date': 'Tue, 25 Nov 2025 00:42:10 GMT', 'server': 'Google Frontend', 'Content-Length': '50'} 
- body={
-    "email": "email deve ser um email válido"
-} 
- </msg>
-<msg time="2025-11-24T21:42:10.020299" level="INFO">${response} = &lt;Response [400]&gt;</msg>
-<var>${response}</var>
-<arg>url=${BASE_URL}/login</arg>
-<arg>json=${body}</arg>
-<arg>headers=${headers}</arg>
-<arg>expected_status=400</arg>
-<doc>Sends a POST request.</doc>
-<status status="PASS" start="2025-11-24T21:42:09.729930" elapsed="0.290669"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${response.json()['email']}</arg>
-<arg>email deve ser um email válido</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-11-24T21:42:10.021249" elapsed="0.001125"/>
-</kw>
-<status status="PASS" start="2025-11-24T21:42:09.721409" elapsed="0.301397"/>
-</test>
-<status status="PASS" start="2025-11-24T21:42:08.570086" elapsed="1.467163"/>
+<status status="FAIL" start="2025-11-24T21:50:22.182286" elapsed="0.411642"/>
 </suite>
-<status status="PASS" start="2025-11-24T21:42:08.563347" elapsed="1.478466"/>
+<status status="FAIL" start="2025-11-24T21:50:22.175625" elapsed="0.427288"/>
 </suite>
-<status status="PASS" start="2025-11-24T21:42:08.556834" elapsed="1.498710"/>
+<status status="FAIL" start="2025-11-24T21:50:22.170022" elapsed="0.438181"/>
 </suite>
-<status status="PASS" start="2025-11-24T21:42:08.498943" elapsed="1.563881"/>
+<status status="FAIL" start="2025-11-24T21:50:22.133000" elapsed="0.479261"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="ServerRest API" id="s1" pass="3" fail="0" skip="0">ServerRest API</stat>
-<stat name="Test Api" id="s1-s1" pass="3" fail="0" skip="0">ServerRest API.Test Api</stat>
-<stat name="Test" id="s1-s1-s1" pass="3" fail="0" skip="0">ServerRest API.Test Api.Test</stat>
-<stat name="Login" id="s1-s1-s1-s1" pass="3" fail="0" skip="0">ServerRest API.Test Api.Test.Login</stat>
+<stat name="ServerRest API" id="s1" pass="0" fail="1" skip="0">ServerRest API</stat>
+<stat name="Test Api" id="s1-s1" pass="0" fail="1" skip="0">ServerRest API.Test Api</stat>
+<stat name="Test" id="s1-s1-s1" pass="0" fail="1" skip="0">ServerRest API.Test Api.Test</stat>
+<stat name="User" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">ServerRest API.Test Api.Test.User</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-11-24T21:42:09.023164" level="ERROR">Error in file 'D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\base.resource' on line 5: Error in file 'D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\test_api\test\login.robot' on line 5: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2025-11-24T21:50:22.570624" level="ERROR">Error in file 'D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\base.resource' on line 5: Error in file 'D:\Pessoais\Cursos\Postman\GitHub\ServerRest_API\test_api\test\login.robot' on line 5: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
